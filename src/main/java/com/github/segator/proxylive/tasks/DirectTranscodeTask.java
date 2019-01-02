@@ -53,7 +53,7 @@ public class DirectTranscodeTask implements IMultiplexerStreamer {
 
     @PostConstruct
     public void initializeBean() {
-        url = config.getSource().getTvheadendurl() + "/stream/channel/" + channelName;
+        url = config.getSource().getTvheadendurl() + "/stream/channelid/" + channelName;
         multiplexerOutputStream = new BroadcastCircularBufferedOutputStream(config.getBuffers().getBroadcastBufferSize());
 
     }
